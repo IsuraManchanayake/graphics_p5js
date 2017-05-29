@@ -8,14 +8,21 @@ var pointx;
 var pointy;
 var thresh;
 
+//var xslider;
+//var yslider;
+//var tslider;
+
 function preload() {
-    maxIterations = 100;
+    maxIterations = 10000;
     maxVal = 16;
-    height = 1500;
-    width = 1500;
-    pointx = -1
-    pointy = 0;
-    thresh = 1;
+    height = 2500;
+    width = 2500;
+    pointx = -.77568377;
+    pointy = 0.13646737;
+    thresh = 0.001;
+    //xslider = createSlider(-2.5, 0, -.77568377, 0.001);
+    //yslider = createSlider(-2, 2, .13646737, 0.001);
+    //tslider = createSlider(0.001, 1, 0.001, 0.001);
 }
 
 function setup() {
@@ -25,6 +32,11 @@ function setup() {
 }
 
 function draw() {
+
+    //pointx = xslider.value();
+    //pointy = yslider.value();
+    //thresh = tslider.value();
+
     var left = pointx - thresh;
     var right = pointx + thresh;
     var down = pointy - thresh;
@@ -62,7 +74,7 @@ function draw() {
             //if(iter == maxIterations)
             //  stroke(0);
             //else
-                stroke(map(iter, 0, maxIterations, 0, 1000));
+                stroke(map(iter, 0, maxIterations / 70, 0, 1000));
                 //stroke(map(color, 0, maxIterations, 0, 255), 128, 128);
             point(x, y);
         }

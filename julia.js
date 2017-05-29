@@ -25,10 +25,6 @@ function setup() {
 }
 
 function draw() {
-    var left = pointx - thresh;
-    var right = pointx + thresh;
-    var down = pointy - thresh;
-    var up = pointy + thresh;
     for(var x = 0; x < width; x++) {
         for(var y = 0; y < height; y++) {
 
@@ -63,11 +59,10 @@ function draw() {
             //  stroke(0);
             //else
                 stroke(map(iter, 0, maxIterations, 0, 1000));
-                //stroke(map(color, 0, maxIterations, 0, 255), 128, 128);
+                //stroke(map(iter, 0, maxIterations, 500, 1000), 1000, 1000);
             point(x, y);
         }
     }
 
-
-
+frontman
 }
